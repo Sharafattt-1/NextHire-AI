@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9o%+szekhjb46bcy##dbwb+-$1iqp5(mo#2@6!p0c=8!$)jb*p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False 
 
 ALLOWED_HOSTS = [
     "nexthire-ai-8.onrender.com",
