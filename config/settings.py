@@ -25,13 +25,7 @@ SECRET_KEY = 'django-insecure-9o%+szekhjb46bcy##dbwb+-$1iqp5(mo#2@6!p0c=8!$)jb*p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    "nexthire-ai-8.onrender.com",
-    "nexthire-ai-10.onrender.com",
-    "127.0.0.1",
-    "localhost",
-]
-
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
