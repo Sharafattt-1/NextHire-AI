@@ -1,0 +1,980 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+NextHire AI
+{% endblock %}
+
+{% block content %}
+<!-- ================= HERO ================= -->
+
+<section class="relative overflow-hidden min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white">
+
+    <!-- Background Glow -->
+
+    <div class="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full bg-blue-600/20 blur-[160px]"></div>
+
+    <div class="absolute bottom-0 right-0 w-[450px] h-[450px] rounded-full bg-cyan-500/20 blur-[160px]"></div>
+
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.05),transparent_60%)]"></div>
+
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <div class="min-h-screen flex flex-col justify-center items-center text-center">
+
+
+            <!-- Badge -->
+
+            <div class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-blue-500/15 border border-blue-400/20 backdrop-blur">
+
+                <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
+
+                <span class="text-blue-200 font-medium">
+
+                    AI Powered Resume Analyzer
+
+                </span>
+
+            </div>
+
+
+
+            <!-- Heading -->
+
+            <h1 class="mt-10 text-6xl lg:text-8xl font-black leading-tight tracking-tight">
+
+                Build a Resume
+
+                <br>
+
+                <span class="bg-gradient-to-r from-cyan-300 via-blue-400 to-blue-600 bg-clip-text text-transparent">
+
+                    That Gets Interviews
+
+                </span>
+
+            </h1>
+
+
+
+            <!-- Subtitle -->
+
+            <p class="mt-8 max-w-3xl text-xl leading-9 text-slate-300">
+
+                Upload your resume and receive an AI-powered ATS analysis,
+
+                personalized improvement suggestions, interview questions,
+
+                missing skills detection and career recommendations
+
+                in just a few seconds.
+
+            </p>
+
+
+
+            <!-- Buttons -->
+
+            <div class="mt-14 flex flex-wrap justify-center gap-6">
+
+                <a href="#upload"
+
+                class="px-12 py-5 rounded-2xl bg-blue-600 hover:bg-blue-700 text-xl font-bold shadow-2xl hover:scale-105 transition duration-300">
+
+                    🚀 Analyze Resume
+
+                </a>
+
+
+                <a href="#features"
+
+                class="px-12 py-5 rounded-2xl border border-white/20 bg-white/10 backdrop-blur hover:bg-white/20 text-xl font-semibold transition duration-300">
+
+                    Explore Features
+
+                </a>
+
+            </div>
+
+
+
+            <!-- Stats -->
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24 w-full max-w-6xl">
+
+
+                <div class="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-10 hover:-translate-y-2 transition duration-300">
+
+                    <div class="text-5xl mb-5">
+
+                        📄
+
+                    </div>
+
+                    <h2 class="text-5xl font-black">
+
+                        25K+
+
+                    </h2>
+
+                    <p class="mt-3 text-slate-300 text-lg">
+
+                        Resumes Analyzed
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-10 hover:-translate-y-2 transition duration-300">
+
+                    <div class="text-5xl mb-5">
+
+                        🎯
+
+                    </div>
+
+                    <h2 class="text-5xl font-black text-cyan-400">
+
+                        96%
+
+                    </h2>
+
+                    <p class="mt-3 text-slate-300 text-lg">
+
+                        ATS Accuracy
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-10 hover:-translate-y-2 transition duration-300">
+
+                    <div class="text-5xl mb-5">
+
+                        ⚡
+
+                    </div>
+
+                    <h2 class="text-5xl font-black">
+
+                        24×7
+
+                    </h2>
+
+                    <p class="mt-3 text-slate-300 text-lg">
+
+                        AI Assistance
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Scroll Indicator -->
+
+            <div class="mt-20 animate-bounce">
+
+                <a href="#features"
+
+                class="text-slate-400 hover:text-white text-4xl">
+
+                    ↓
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= FEATURES ================= -->
+
+<section id="features" class="py-32 bg-slate-50">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center max-w-3xl mx-auto">
+
+            <span class="inline-block px-5 py-2 rounded-full bg-blue-100 text-blue-700 font-semibold">
+
+                Powerful Features
+
+            </span>
+
+            <h2 class="mt-8 text-5xl lg:text-6xl font-black text-slate-900">
+
+                Everything You Need
+
+                <span class="text-blue-600">
+
+                    To Land More Interviews
+
+                </span>
+
+            </h2>
+
+            <p class="mt-8 text-xl leading-9 text-slate-600">
+
+                NextHire AI helps you optimize your resume using AI,
+                improve ATS compatibility and prepare confidently for interviews.
+
+            </p>
+
+        </div>
+
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-24">
+
+
+            <!-- Card 1 -->
+
+            <div class="bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2 border border-slate-200">
+
+                <div class="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center text-3xl">
+
+                    📄
+
+                </div>
+
+                <h3 class="mt-8 text-2xl font-bold text-slate-900">
+
+                    Resume Analysis
+
+                </h3>
+
+                <p class="mt-5 text-slate-600 leading-8">
+
+                    Receive an in-depth AI analysis of your resume structure,
+                    formatting, readability and content quality.
+
+                </p>
+
+            </div>
+
+
+            <!-- Card 2 -->
+
+            <div class="bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2 border border-slate-200">
+
+                <div class="w-16 h-16 rounded-2xl bg-green-100 flex items-center justify-center text-3xl">
+
+                    🎯
+
+                </div>
+
+                <h3 class="mt-8 text-2xl font-bold text-slate-900">
+
+                    ATS Score
+
+                </h3>
+
+                <p class="mt-5 text-slate-600 leading-8">
+
+                    Check how well your resume performs against Applicant
+                    Tracking Systems used by recruiters.
+
+                </p>
+
+            </div>
+
+
+            <!-- Card 3 -->
+
+            <div class="bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2 border border-slate-200">
+
+                <div class="w-16 h-16 rounded-2xl bg-red-100 flex items-center justify-center text-3xl">
+
+                    🚀
+
+                </div>
+
+                <h3 class="mt-8 text-2xl font-bold text-slate-900">
+
+                    Missing Skills
+
+                </h3>
+
+                <p class="mt-5 text-slate-600 leading-8">
+
+                    Discover important technical and professional skills
+                    missing from your resume.
+
+                </p>
+
+            </div>
+
+
+            <!-- Card 4 -->
+
+            <div class="bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2 border border-slate-200">
+
+                <div class="w-16 h-16 rounded-2xl bg-yellow-100 flex items-center justify-center text-3xl">
+
+                    💼
+
+                </div>
+
+                <h3 class="mt-8 text-2xl font-bold text-slate-900">
+
+                    Career Suggestions
+
+                </h3>
+
+                <p class="mt-5 text-slate-600 leading-8">
+
+                    Get AI recommendations for job roles that best match
+                    your experience and skills.
+
+                </p>
+
+            </div>
+
+
+            <!-- Card 5 -->
+
+            <div class="bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2 border border-slate-200">
+
+                <div class="w-16 h-16 rounded-2xl bg-purple-100 flex items-center justify-center text-3xl">
+
+                    ❓
+
+                </div>
+
+                <h3 class="mt-8 text-2xl font-bold text-slate-900">
+
+                    Interview Questions
+
+                </h3>
+
+                <p class="mt-5 text-slate-600 leading-8">
+
+                    Practice with AI-generated interview questions based
+                    on your resume and target role.
+
+                </p>
+
+            </div>
+
+
+            <!-- Card 6 -->
+
+            <div class="bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2 border border-slate-200">
+
+                <div class="w-16 h-16 rounded-2xl bg-cyan-100 flex items-center justify-center text-3xl">
+
+                    📈
+
+                </div>
+
+                <h3 class="mt-8 text-2xl font-bold text-slate-900">
+
+                    Learning Roadmap
+
+                </h3>
+
+                <p class="mt-5 text-slate-600 leading-8">
+
+                    Receive a personalized roadmap to strengthen your
+                    profile and improve your chances of getting hired.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="py-32 bg-white">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center max-w-3xl mx-auto">
+
+            <span class="inline-block px-5 py-2 rounded-full bg-blue-100 text-blue-700 font-semibold">
+
+                Simple Process
+
+            </span>
+
+            <h2 class="mt-8 text-5xl lg:text-6xl font-black text-slate-900">
+
+                How NextHire AI
+
+                <span class="text-blue-600">
+
+                    Works
+
+                </span>
+
+            </h2>
+
+            <p class="mt-8 text-xl text-slate-600 leading-9">
+
+                Upload your resume and receive a complete AI-powered report
+                in just a few seconds.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="relative mt-28">
+
+            <!-- Desktop Line -->
+
+            <div class="hidden lg:block absolute top-16 left-[16%] right-[16%] h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 rounded-full"></div>
+
+
+
+            <div class="grid lg:grid-cols-3 gap-12">
+
+
+
+                <!-- STEP 1 -->
+
+                <div class="relative text-center">
+
+                    <div class="mx-auto w-24 h-24 rounded-full bg-blue-600 text-white flex items-center justify-center text-4xl shadow-xl">
+
+                        📄
+
+                    </div>
+
+                    <div class="mt-6 inline-flex w-10 h-10 rounded-full bg-blue-600 text-white items-center justify-center font-bold">
+
+                        1
+
+                    </div>
+
+                    <h3 class="mt-6 text-3xl font-bold text-slate-900">
+
+                        Upload Resume
+
+                    </h3>
+
+                    <p class="mt-5 text-slate-600 leading-8">
+
+                        Upload your resume in PDF format using our secure
+                        upload system.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- STEP 2 -->
+
+                <div class="relative text-center">
+
+                    <div class="mx-auto w-24 h-24 rounded-full bg-cyan-500 text-white flex items-center justify-center text-4xl shadow-xl">
+
+                        🤖
+
+                    </div>
+
+                    <div class="mt-6 inline-flex w-10 h-10 rounded-full bg-cyan-500 text-white items-center justify-center font-bold">
+
+                        2
+
+                    </div>
+
+                    <h3 class="mt-6 text-3xl font-bold text-slate-900">
+
+                        AI Analysis
+
+                    </h3>
+
+                    <p class="mt-5 text-slate-600 leading-8">
+
+                        Gemini AI analyzes ATS score, formatting,
+                        keywords, strengths and weaknesses.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- STEP 3 -->
+
+                <div class="relative text-center">
+
+                    <div class="mx-auto w-24 h-24 rounded-full bg-green-600 text-white flex items-center justify-center text-4xl shadow-xl">
+
+                        🚀
+
+                    </div>
+
+                    <div class="mt-6 inline-flex w-10 h-10 rounded-full bg-green-600 text-white items-center justify-center font-bold">
+
+                        3
+
+                    </div>
+
+                    <h3 class="mt-6 text-3xl font-bold text-slate-900">
+
+                        Get Results
+
+                    </h3>
+
+                    <p class="mt-5 text-slate-600 leading-8">
+
+                        View your professional AI report,
+                        download it as a PDF and start improving your resume.
+
+                    </p>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Bottom Cards -->
+
+        <div class="grid md:grid-cols-3 gap-8 mt-24">
+
+            <div class="rounded-3xl bg-slate-50 border border-slate-200 p-8 text-center hover:shadow-xl transition">
+
+                <div class="text-5xl mb-5">
+
+                    ⚡
+
+                </div>
+
+                <h4 class="text-2xl font-bold text-slate-900">
+
+                    Fast Analysis
+
+                </h4>
+
+                <p class="mt-4 text-slate-600">
+
+                    Results generated in seconds.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="rounded-3xl bg-slate-50 border border-slate-200 p-8 text-center hover:shadow-xl transition">
+
+                <div class="text-5xl mb-5">
+
+                    🔒
+
+                </div>
+
+                <h4 class="text-2xl font-bold text-slate-900">
+
+                    Secure Upload
+
+                </h4>
+
+                <p class="mt-4 text-slate-600">
+
+                    Your resume is processed securely.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="rounded-3xl bg-slate-50 border border-slate-200 p-8 text-center hover:shadow-xl transition">
+
+                <div class="text-5xl mb-5">
+
+                    📊
+
+                </div>
+
+                <h4 class="text-2xl font-bold text-slate-900">
+
+                    Professional Report
+
+                </h4>
+
+                <p class="mt-4 text-slate-600">
+
+                    Download a clean AI-generated resume report.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= UPLOAD ================= -->
+
+<section id="upload" class="py-24 bg-slate-100">
+
+    <div class="max-w-4xl mx-auto px-6">
+
+        <div class="bg-white rounded-[32px] shadow-2xl border border-slate-200 overflow-hidden">
+
+            <!-- Header -->
+
+            <div class="bg-gradient-to-r from-blue-600 to-cyan-500 text-center py-12 px-8">
+
+                <div class="text-6xl mb-4">📄</div>
+
+                <h2 class="text-4xl font-black text-white">
+                    Upload Your Resume
+                </h2>
+
+                <p class="text-blue-100 text-lg mt-4 max-w-2xl mx-auto">
+                    Upload your PDF resume and receive an AI-powered ATS report,
+                    personalized recommendations and interview preparation.
+                </p>
+
+            </div>
+
+            <!-- Body -->
+
+            <div class="p-10">
+
+                <form id="resumeForm"
+                      method="POST"
+                      action="{% url 'home' %}"
+                      enctype="multipart/form-data">
+
+                    {% csrf_token %}
+
+                    <label
+    for="resumeUpload"
+    class="block border-2 border-dashed border-slate-300 rounded-3xl p-12 text-center cursor-pointer hover:border-blue-500 hover:bg-blue-50 transition duration-300">
+
+    <div class="text-6xl mb-5">
+        ☁️
+    </div>
+
+    <h3 class="text-3xl font-bold text-slate-900">
+        Drag & Drop Your Resume
+    </h3>
+
+    <p class="text-slate-500 mt-3 text-lg">
+        or click anywhere to browse your computer
+    </p>
+
+    <input
+        id="resumeUpload"
+        name="resume"
+        type="file"
+        accept=".pdf"
+        class="hidden"
+        onchange="showFileName()">
+
+    <div class="inline-flex mt-8 px-8 py-4 rounded-xl bg-blue-600 text-white font-bold shadow-lg">
+        📂 Choose PDF File
+    </div>
+
+    <div
+        id="fileName"
+        class="mt-6 text-lg font-semibold text-blue-700">
+
+        No file selected
+
+    </div>
+
+</label>
+
+                    <!-- BUTTON -->
+
+                    <div class="mt-10">
+
+    <button
+        id="analyzeBtn"
+        type="submit"
+        class="w-full rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 py-5 text-xl font-bold text-white shadow-xl hover:shadow-2xl hover:scale-[1.02] transition">
+
+        🚀 Analyze Resume
+
+    </button>
+
+</div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= LOADING SCREEN ================= -->
+
+<div id="loadingScreen"
+
+class="fixed inset-0 bg-slate-950/95 backdrop-blur-lg hidden z-[9999] items-center justify-center">
+
+    <div class="text-center">
+
+        <div class="mx-auto w-24 h-24 border-[8px] border-slate-700 border-t-blue-500 rounded-full animate-spin"></div>
+
+        <h2 class="mt-10 text-4xl font-black text-white">
+
+            Analyzing Resume...
+
+        </h2>
+
+        <p class="mt-4 text-xl text-slate-300">
+
+            Our AI is reviewing your resume.
+
+            This usually takes only a few seconds.
+
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+function showFileName(){
+
+    const input=document.getElementById("resumeUpload");
+
+    const file=document.getElementById("fileName");
+
+
+
+    if(input.files.length>0){
+
+        file.innerHTML="✅ "+input.files[0].name;
+
+    }else{
+
+        file.innerHTML="No file selected";
+
+    }
+
+}
+
+
+
+document.getElementById("resumeForm").addEventListener("submit",function(){
+
+    document.getElementById("loadingScreen").style.display="flex";
+
+});
+
+</script>
+<!-- ================= WHY CHOOSE NEXTHIRE ================= -->
+
+<section class="py-32 bg-white">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center max-w-3xl mx-auto">
+
+            <span class="inline-block px-5 py-2 rounded-full bg-blue-100 text-blue-700 font-semibold">
+
+                Why Choose Us
+
+            </span>
+
+            <h2 class="mt-8 text-5xl lg:text-6xl font-black text-slate-900">
+
+                Why Thousands Trust
+
+                <span class="text-blue-600">
+
+                    NextHire AI
+
+                </span>
+
+            </h2>
+
+            <p class="mt-8 text-xl leading-9 text-slate-600">
+
+                Designed for students, freshers and professionals who want
+                better resumes, higher ATS scores and more interview calls.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mt-24">
+
+            <!-- Card 1 -->
+
+            <div class="bg-slate-50 rounded-3xl p-10 border border-slate-200 hover:shadow-xl hover:-translate-y-2 transition">
+
+                <div class="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center text-3xl">
+
+                    🤖
+
+                </div>
+
+                <h3 class="mt-8 text-2xl font-bold text-slate-900">
+
+                    AI Powered
+
+                </h3>
+
+                <p class="mt-5 text-slate-600 leading-8">
+
+                    Advanced Gemini AI analyzes every section of your resume
+                    intelligently.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- Card 2 -->
+
+            <div class="bg-slate-50 rounded-3xl p-10 border border-slate-200 hover:shadow-xl hover:-translate-y-2 transition">
+
+                <div class="w-16 h-16 rounded-2xl bg-green-100 flex items-center justify-center text-3xl">
+
+                    ⚡
+
+                </div>
+
+                <h3 class="mt-8 text-2xl font-bold text-slate-900">
+
+                    Instant Results
+
+                </h3>
+
+                <p class="mt-5 text-slate-600 leading-8">
+
+                    Complete resume reports are generated within a few
+                    seconds.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- Card 3 -->
+
+            <div class="bg-slate-50 rounded-3xl p-10 border border-slate-200 hover:shadow-xl hover:-translate-y-2 transition">
+
+                <div class="w-16 h-16 rounded-2xl bg-purple-100 flex items-center justify-center text-3xl">
+
+                    🎯
+
+                </div>
+
+                <h3 class="mt-8 text-2xl font-bold text-slate-900">
+
+                    ATS Optimized
+
+                </h3>
+
+                <p class="mt-5 text-slate-600 leading-8">
+
+                    Improve ATS compatibility and increase your interview
+                    opportunities.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- Card 4 -->
+
+            <div class="bg-slate-50 rounded-3xl p-10 border border-slate-200 hover:shadow-xl hover:-translate-y-2 transition">
+
+                <div class="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center text-3xl">
+
+                    🔒
+
+                </div>
+
+                <h3 class="mt-8 text-2xl font-bold text-slate-900">
+
+                    Secure
+
+                </h3>
+
+                <p class="mt-5 text-slate-600 leading-8">
+
+                    Your uploaded resumes remain private and securely
+                    processed.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FINAL CTA ================= -->
+
+<section class="py-28 bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-500">
+
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+        <h2 class="text-5xl lg:text-6xl font-black text-white leading-tight">
+
+            Ready To Build
+
+            <br>
+
+            A Resume Recruiters Love?
+
+        </h2>
+
+        <p class="mt-8 text-xl text-blue-100 leading-9 max-w-3xl mx-auto">
+
+            Join thousands of job seekers who use NextHire AI to improve
+            their resumes, increase ATS scores and receive more interview
+            opportunities.
+
+        </p>
+
+        <a href="#upload"
+
+        class="inline-flex items-center justify-center mt-12 px-12 py-5 rounded-2xl bg-white text-blue-700 text-xl font-bold shadow-2xl hover:scale-105 transition duration-300">
+
+            🚀 Analyze My Resume
+
+        </a>
+
+    </div>
+
+</section>
+{% endblock %}

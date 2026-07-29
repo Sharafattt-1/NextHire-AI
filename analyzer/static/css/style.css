@@ -1,0 +1,788 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+
+/* ===========================
+   GLOBAL RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f8fafc;
+
+    color:#0f172a;
+
+    overflow-x:hidden;
+
+}
+
+
+
+/* ===========================
+   RESULT PAGE
+=========================== */
+
+
+.result-wrapper{
+
+    min-height:100vh;
+
+    background:#f1f5f9;
+
+    padding:70px 0;
+
+}
+
+
+
+.result-container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+
+
+/* MAIN CARD */
+
+.result-card{
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    margin-bottom:35px;
+
+    border:1px solid #e2e8f0;
+
+    box-shadow:
+    0 10px 30px rgba(15,23,42,0.08);
+
+}
+
+
+
+.result-card h1{
+
+    color:#0f172a;
+
+    font-size:38px;
+
+    font-weight:800;
+
+}
+
+
+
+.result-card h2{
+
+    color:#0f172a;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.result-card p{
+
+    color:#475569;
+
+    line-height:1.7;
+
+}
+
+
+
+.subtitle{
+
+    margin-top:10px;
+
+    font-size:18px;
+
+}
+
+
+
+/* ===========================
+ HEADER
+=========================== */
+
+
+.header-flex{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.action-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+
+
+.dark-btn,
+.blue-btn{
+
+    padding:14px 25px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+
+
+.dark-btn{
+
+    background:#0f172a;
+
+}
+
+
+
+.dark-btn:hover{
+
+    background:#020617;
+
+}
+
+
+
+.blue-btn{
+
+    background:#2563eb;
+
+}
+
+
+
+.blue-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+
+/* ===========================
+ SCORE SECTION
+=========================== */
+
+
+.score-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.score-box p{
+
+    color:#64748b;
+
+    font-weight:500;
+
+}
+
+
+
+.score-box h2{
+
+    font-size:38px;
+
+    margin-top:15px;
+
+}
+
+
+
+.blue-text{
+
+    color:#2563eb !important;
+
+}
+
+
+
+.green-text{
+
+    color:#16a34a !important;
+
+}
+
+
+
+.purple-text{
+
+    color:#9333ea !important;
+
+}
+
+
+
+.red-text{
+
+    color:#dc2626 !important;
+
+}
+
+
+
+/* Progress */
+
+.progress{
+
+    height:12px;
+
+    background:#e2e8f0;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin-top:25px;
+
+}
+
+
+
+.progress-fill{
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #06b6d4
+    );
+
+    border-radius:50px;
+
+}
+
+
+
+/* SUMMARY */
+
+.inner-box{
+
+    background:#f8fafc;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    border:1px solid #e2e8f0;
+
+}
+
+
+
+.inner-box p{
+
+    color:#334155;
+
+    font-size:16px;
+
+}
+/* ===========================
+   TABLE SECTIONS
+=========================== */
+
+
+.two-column{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.result-table{
+
+    width:100%;
+
+    border-collapse:separate;
+
+    border-spacing:0;
+
+    overflow:hidden;
+
+    border-radius:16px;
+
+    border:1px solid #e2e8f0;
+
+}
+
+
+
+.result-table thead{
+
+    background:#f8fafc;
+
+}
+
+
+
+.result-table th{
+
+    text-align:left;
+
+    padding:18px;
+
+    color:#334155;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+
+
+.result-table td{
+
+    padding:18px;
+
+    color:#334155;
+
+    border-top:1px solid #e2e8f0;
+
+    font-size:15px;
+
+}
+
+
+
+.result-table tr:hover td{
+
+    background:#f8fafc;
+
+}
+
+
+
+.number{
+
+    width:60px;
+
+    font-weight:700;
+
+    color:#2563eb !important;
+
+}
+
+
+
+/* ===========================
+   SKILL BADGE
+=========================== */
+
+
+.skill-badge{
+
+    display:inline-block;
+
+    background:#fff7ed;
+
+    color:#ea580c;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    border:1px solid #fed7aa;
+
+    font-weight:600;
+
+}
+
+
+
+/* ===========================
+   ROADMAP
+=========================== */
+
+
+.roadmap{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+
+.road-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    background:#f8fafc;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    border:1px solid #e2e8f0;
+
+}
+
+
+
+.step-number{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:700;
+
+    flex-shrink:0;
+
+}
+
+
+
+.road-item p{
+
+    color:#334155;
+
+    font-weight:500;
+
+}
+
+
+
+
+
+/* ===========================
+   FINAL CTA CARD
+=====:contentReference[oaicite:0]{index=0}
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+
+@media(max-width:1000px){
+
+
+    .score-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .two-column{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .header-flex{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+
+}
+
+
+
+
+@media(max-width:700px){
+
+
+    .result-wrapper{
+
+        padding:40px 0;
+
+    }
+
+
+
+    .result-container{
+
+        width:94%;
+
+    }
+
+
+
+    .result-card{
+
+        padding:22px;
+
+        border-radius:18px;
+
+    }
+
+
+
+    .result-card h1{
+
+        font-size:30px;
+
+    }
+
+
+
+    .result-card h2{
+
+        font-size:22px;
+
+    }
+
+
+
+    .action-buttons{
+
+        width:100%;
+
+        flex-direction:column;
+
+    }
+
+
+
+    .dark-btn,
+    .blue-btn{
+
+        text-align:center;
+
+        width:100%;
+
+    }
+
+
+
+    .result-table{
+
+        font-size:14px;
+
+    }
+
+
+
+    .result-table th,
+    .result-table td{
+
+        padding:14px;
+
+    }
+
+
+
+    .final-card{
+
+        padding:35px 20px;
+
+    }
+
+
+
+}
+
+
+
+
+
+/* ===========================
+   REMOVE OLD COLOR CONFLICTS
+=========================== */
+
+
+/* Prevent old CSS forcing white text */
+
+.result-wrapper *,
+.result-wrapper *::before,
+.result-wrapper *::after{
+
+    color:inherit;
+
+}
+
+
+/* Correct default text colors */
+
+.result-wrapper h1,
+.result-wrapper h2,
+.result-wrapper h3{
+
+    color:#0f172a;
+
+}
+
+
+.result-wrapper p,
+.result-wrapper td,
+.result-wrapper th{
+
+    color:#334155;
+
+}
+
+
+/* Buttons stay visible */
+
+.result-wrapper .dark-btn{
+
+    color:white;
+
+}
+
+
+.result-wrapper .blue-btn{
+
+    color:white;
+
+}
+
+
+.result-wrapper .white-btn{
+
+    color:#2563eb;
+
+}
+/* ===== FIX ANALYZE BUTTON ===== */
+
+#analyzeBtn{
+
+    position:static !important;
+
+    display:inline-flex !important;
+
+    width:auto !important;
+
+    max-width:100% !important;
+
+    margin:0 auto !important;
+
+    padding:18px 42px !important;
+
+    border:none !important;
+
+    border-radius:18px !important;
+
+    background:linear-gradient(90deg,#2563eb,#06b6d4) !important;
+
+    color:#fff !important;
+
+    font-size:20px !important;
+
+    font-weight:700 !important;
+
+    cursor:pointer !important;
+
+    box-shadow:0 15px 35px rgba(37,99,235,.35) !important;
+
+}
+
+#analyzeBtn:hover{
+
+    transform:translateY(-2px) !important;
+
+}
+
+#resumeForm{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+#resumeForm > div:last-child{
+
+    margin-top:40px;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+}

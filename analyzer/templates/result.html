@@ -1,0 +1,709 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+NextHire AI - Resume Report
+{% endblock %}
+
+
+{% block content %}
+
+<section class="result-wrapper">
+
+<div class="result-container">
+
+
+<!-- TOP HEADER -->
+
+<div class="result-card header-card">
+
+    <div class="header-flex">
+
+        <div>
+
+            <h1>
+                Resume Analysis Report
+            </h1>
+
+            <p class="subtitle">
+                {{ response.resume_title|default:"AI Resume Analysis" }}
+            </p>
+
+        </div>
+
+
+        <div class="action-buttons">
+
+            <a href="{% url 'download_pdf' %}" class="dark-btn">
+                ⬇ Download PDF
+            </a>
+
+
+            <a href="{% url 'home' %}" class="blue-btn">
+                🔄 Analyze Another
+            </a>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+<!-- SCORE CARDS -->
+
+<div class="score-grid">
+
+
+    <div class="result-card score-box">
+
+        <p>
+            ATS Score
+        </p>
+
+        <h2 class="blue-text">
+            {{ response.ats_score|default:0 }}%
+        </h2>
+
+
+        <div class="progress">
+
+            <div 
+            class="progress-fill"
+            style="width:{{ response.ats_score|default:0 }}%;">
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="result-card score-box">
+
+        <p>
+            Overall Rating
+        </p>
+
+        <h2 class="green-text">
+
+            {{ response.overall_rating|default:"Unknown" }}
+
+        </h2>
+
+
+    </div>
+
+
+
+
+
+    <div class="result-card score-box">
+
+        <p>
+            Experience Level
+        </p>
+
+
+        <h2 class="purple-text">
+
+            {{ response.experience_level|default:"Unknown" }}
+
+        </h2>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+<!-- SUMMARY -->
+
+<div class="result-card section-card">
+
+
+<h2>
+Resume Summary
+</h2>
+
+
+<div class="inner-box">
+
+<p>
+
+{{ response.resume_summary|default:"No summary available." }}
+
+</p>
+
+</div>
+
+
+</div>
+<!-- STRENGTHS & WEAKNESSES -->
+
+<div class="two-column">
+
+
+<!-- STRENGTHS -->
+
+<div class="result-card section-card">
+
+
+<h2 class="green-text">
+    ✅ Strengths
+</h2>
+
+
+<table class="result-table">
+
+<thead>
+
+<tr>
+
+<th>
+Strength
+</th>
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+
+{% for item in response.strengths %}
+
+<tr>
+
+<td>
+✓ {{ item }}
+</td>
+
+</tr>
+
+
+{% empty %}
+
+<tr>
+
+<td>
+No strengths detected.
+</td>
+
+</tr>
+
+
+{% endfor %}
+
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+<!-- WEAKNESSES -->
+
+<div class="result-card section-card">
+
+
+<h2 class="red-text">
+    ❌ Weaknesses
+</h2>
+
+
+
+<table class="result-table">
+
+
+<thead>
+
+<tr>
+
+<th>
+Area To Improve
+</th>
+
+</tr>
+
+</thead>
+
+
+
+<tbody>
+
+
+{% for item in response.weaknesses %}
+
+
+<tr>
+
+<td>
+⚠ {{ item }}
+</td>
+
+</tr>
+
+
+{% empty %}
+
+
+<tr>
+
+<td>
+No weaknesses detected.
+</td>
+
+</tr>
+
+
+{% endfor %}
+
+
+</tbody>
+
+
+</table>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- MISSING SKILLS -->
+
+
+<div class="result-card section-card">
+
+
+<h2>
+Missing Skills
+</h2>
+
+
+
+<table class="result-table">
+
+
+<thead>
+
+<tr>
+
+<th>
+Recommended Skills To Learn
+</th>
+
+</tr>
+
+</thead>
+
+
+
+<tbody>
+
+
+{% for skill in response.missing_skills %}
+
+
+<tr>
+
+<td>
+
+<span class="skill-badge">
+
+{{ skill }}
+
+</span>
+
+</td>
+
+</tr>
+
+
+{% empty %}
+
+
+<tr>
+
+<td>
+No missing skills detected.
+</td>
+
+</tr>
+
+
+{% endfor %}
+
+
+</tbody>
+
+
+</table>
+
+
+
+</div>
+<!-- RECOMMENDED ROLES -->
+
+
+<div class="result-card section-card">
+
+
+<h2>
+    Recommended Roles
+</h2>
+
+
+
+<table class="result-table">
+
+
+<thead>
+
+<tr>
+
+<th>
+Suitable Job Roles
+</th>
+
+</tr>
+
+</thead>
+
+
+
+<tbody>
+
+
+{% for role in response.recommended_roles %}
+
+
+<tr>
+
+<td>
+
+💼 {{ role }}
+
+</td>
+
+</tr>
+
+
+{% empty %}
+
+
+<tr>
+
+<td>
+
+No roles recommended.
+
+</td>
+
+</tr>
+
+
+{% endfor %}
+
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- INTERVIEW QUESTIONS -->
+
+
+<div class="result-card section-card">
+
+
+<h2>
+    Interview Questions
+</h2>
+
+
+
+<table class="result-table">
+
+
+<thead>
+
+<tr>
+
+<th>
+#
+</th>
+
+<th>
+Question
+</th>
+
+</tr>
+
+</thead>
+
+
+
+<tbody>
+
+
+{% for question in response.interview_questions %}
+
+
+<tr>
+
+<td class="number">
+
+{{ forloop.counter }}
+
+</td>
+
+
+<td>
+
+{{ question }}
+
+</td>
+
+
+</tr>
+
+
+{% empty %}
+
+
+<tr>
+
+<td colspan="2">
+
+No interview questions generated.
+
+</td>
+
+</tr>
+
+
+{% endfor %}
+
+
+</tbody>
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- LEARNING ROADMAP -->
+
+
+<div class="result-card section-card">
+
+
+<h2>
+    Learning Roadmap
+</h2>
+
+
+
+<div class="roadmap">
+
+
+{% for step in response.learning_roadmap %}
+
+
+<div class="road-item">
+
+
+<div class="step-number">
+
+{{ forloop.counter }}
+
+</div>
+
+
+
+<p>
+
+{{ step }}
+
+</p>
+
+
+</div>
+
+
+{% empty %}
+
+
+<p>
+No roadmap generated.
+</p>
+
+
+{% endfor %}
+
+
+</div>
+
+
+
+</div>
+<!-- AI SUGGESTIONS -->
+
+
+<div class="result-card section-card">
+
+
+<h2>
+    AI Suggestions
+</h2>
+
+
+
+<table class="result-table">
+
+
+<thead>
+
+<tr>
+
+<th>
+Improvement Suggestions
+</th>
+
+</tr>
+
+</thead>
+
+
+
+<tbody>
+
+
+{% for suggestion in response.suggestions %}
+
+
+<tr>
+
+<td>
+
+✓ {{ suggestion }}
+
+</td>
+
+</tr>
+
+
+{% empty %}
+
+
+<tr>
+
+<td>
+
+No suggestions available.
+
+</td>
+
+</tr>
+
+
+{% endfor %}
+
+
+</tbody>
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- FINAL ACTION -->
+
+
+<div class="final-card">
+
+
+<h2>
+
+Ready To Improve Your Resume?
+
+</h2>
+
+
+<p>
+
+Analyze another resume and get fresh AI recommendations.
+
+</p>
+
+
+
+<a href="{% url 'home' %}" class="white-btn">
+
+Analyze Another Resume
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+{% endblock %}
