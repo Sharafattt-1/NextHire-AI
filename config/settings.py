@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "nexthire-ai-8.onrender.com",
+    "nexthire-ai-10.onrender.com",
     "127.0.0.1",
     "localhost",
 ]
